@@ -1,0 +1,72 @@
+// Loader.scss
+
+$spinner-size: 250px;
+$spinner-color-1: #f10a0a;
+$spinner-color-2: #f57600;;
+$spinner-color-3: #ddf500;
+$spinner-color-4: #4f05fc;
+$spinner-color-5: #e412d9;
+$animation-duration: 1s;
+$color-change-delay: 0.1s;
+$text-color: #cecbcb;
+
+.loader-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.spinner-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.spinner {
+  width: $spinner-size;
+  height: $spinner-size;
+  border-radius: 50%;
+  border: 8px solid transparent;
+  border-top-color: $spinner-color-1;
+  animation: spin $animation-duration linear infinite, colorChange $animation-duration $color-change-delay linear infinite;
+}
+
+.loading-text {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: $text-color;
+  font-weight: bold;
+  font-size: 28px;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes colorChange {
+  0% {
+    border-top-color: $spinner-color-1;
+  }
+  20% {
+    border-top-color: $spinner-color-2;
+  }
+  40% {
+    border-top-color: $spinner-color-3;
+  }
+  60% {
+    border-top-color: $spinner-color-4;
+  }
+
+  80% {
+    border-top-color: $spinner-color-5;
+  }
+
+  100% {
+    border-top-color: $spinner-color-1;
+  }
+}
