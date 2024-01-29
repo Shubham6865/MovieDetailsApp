@@ -1,38 +1,204 @@
+// @import "../../common/colors.scss";
+
+
+// .header{
+//     background-color: $secondary-color;
+//     height:72px ;
+//     padding: 0px 40px;
+//     display: flex;
+//     align-items: center;
+//     justify-content: space-between;
+// }
+
+// .logo{
+//     color: $primary-font;
+//     font-size: 20px;
+//     font-weight: 600;
+// }
+
+// .user-image, .user-image img{
+//     height: 38px;
+//     width: 38px;
+// }
+
+// .search-bar{
+//     width: 50%;
+//     display: flex;
+//     justify-content: center;
+
+
+//     form{
+//         display: flex;
+//         justify-content: center;
+//         width: 70%;
+
+//         button{
+//             padding: 0px 8px;
+//             font-size: 20px;
+//             cursor: pointer;
+//             height: 38px;
+//         }
+//     }
+
+//     input{
+
+//         font-size: 18px;
+//         width: 100%;
+//         padding: 5px 5px 5px 10px;
+//         height: 38px;
+//         outline: none;
+//         color: black;
+//     }
+
+
+// }
+// .fa-search{
+//     color: $secondary-font;
+// }
+
+
+// @media screen  and (max-width:900px){
+//     .header{
+
+//         height:150px ;
+//         // padding: 0px 40px;
+//         display: flex;
+//         flex-direction: column;
+//         align-items: start;
+//         // justify-content: space-between;
+
+//     }
+
+//     .logo{
+//         color: $primary-font;
+//         font-size: 20px;
+//         font-weight: 600;
+//     }
+
+//     .user-image, .user-image img{
+//         height: 0px;
+//         width: 0px;
+
+//     }
+
+//     .search-bar{
+//         width: 50%;
+//         display: flex;
+//         justify-content: center;
+
+
+//         form{
+//             display: flex;
+//             justify-content: center;
+//             width: 70%;
+
+//             button{
+//                 padding: 0px 8px;
+//                 font-size: 20px;
+//                 cursor: pointer;
+//                 height: 38px;
+//             }
+//         }
+
+//         input{
+
+//             font-size: 18px;
+//             width: 100%;
+//             padding: 5px 5px 5px 10px;
+//             height: 38px;
+//             outline: none;
+//             color: black;
+//         }
+
+
+//     }
+//     .fa-search{
+//         color: $secondary-font;
+//     }
+
+// }
+
 @import "../../common/colors.scss";
 
-
-.header{
+.header {
     background-color: $secondary-color;
-    height:72px ;
+    height: 72px;
     padding: 0px 40px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    @media screen and (max-width: 900px) {
+        height: auto;
+        padding: 20px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
 }
 
-.logo{
+.logo {
     color: $primary-font;
-    font-size: 20px;
+    font-size: 30px;
     font-weight: 600;
+    display: flex;
+    // margin-right: 10px;
+    // border: 1px solid red;
+
+
+    @media screen and (max-width: 900px) {
+        margin-bottom: 10px;
+
+        // .logo {
+
+        //     font-size: 25px;
+        //     font-weight: 600;
+        //     display: flex;
+        //     // margin-right: 10px;
+        //     border: 1px solid rgb(0, 68, 255);
+
+        //     ul {
+        //         display: flex;
+        //         border: 1px solid rgb(157, 255, 0);
+        //         margin-left: 5px;
+        //         list-style: none;
+        //         font-size: 20px;
+        //         align-items: center;
+
+        //         li {
+        //             margin-right: 20px;
+        //         }
+
+        //     }
+        // }
+    }
 }
 
-.user-image, .user-image img{
+.user-image,
+.user-image img {
     height: 38px;
     width: 38px;
+
+    @media screen and (max-width: 900px) {
+        height: 0;
+        width: 0;
+    }
 }
 
-.search-bar{
+.search-bar {
     width: 50%;
     display: flex;
     justify-content: center;
 
+    @media screen and (max-width: 900px) {
+        width: 100%;
+    }
 
-    form{
+    form {
         display: flex;
         justify-content: center;
         width: 70%;
 
-        button{
+        button {
             padding: 0px 8px;
             font-size: 20px;
             cursor: pointer;
@@ -40,8 +206,7 @@
         }
     }
 
-    input{
-
+    input {
         font-size: 18px;
         width: 100%;
         padding: 5px 5px 5px 10px;
@@ -49,9 +214,16 @@
         outline: none;
         color: black;
     }
-
-
 }
-.fa-search{
+
+.fa-search {
     color: $secondary-font;
+}
+
+@media screen and (max-width: 900px) {
+    .search-bar {
+        form {
+            width: 100%;
+        }
+    }
 }

@@ -1,7 +1,7 @@
 @import '../../common/colors.scss';
 
 
-.movie-section{
+.movie-section {
     display: flex;
     justify-content: space-evenly;
     padding: 40px 0px;
@@ -9,34 +9,34 @@
     font-weight: 400;
 }
 
-.movie-rating{
+.movie-rating {
     padding-left: 3px;
     margin: 20px 0px;
     color: $secondary-font;
     display: flex;
 
-    span{
+    span {
         margin-right: 20px;
         color: $secondary-font;
 
     }
 }
 
-.movie-title{
+.movie-title {
     font-size: 40px;
     color: $primary-font;
 
 }
 
-.movie-plot{
+.movie-plot {
     margin: 20px 0px;
     line-height: 1.8rem;
 
 }
 
-.movie-info >div span:first-child{
+.movie-info>div span:first-child {
     padding: 10px 0px;
-    
+
     color: $primary-font;
     font-weight: 600;
     width: 100px;
@@ -44,35 +44,72 @@
 
 }
 
-.movie-info>div span{
+.movie-info>div span {
     color: $secondary-font;
-  
+
 }
 
-.fa-star{
+.fa-star {
     color: #ff9e00;
 }
-.fa-thumbs-up{
+
+.fa-thumbs-up {
     color: #fafafa;
 }
-.fa-film{
-    color: rgb(191,213,214);
+
+.fa-film {
+    color: rgb(191, 213, 214);
 }
-.fa-calendar{
+
+.fa-calendar {
     color: peachpuff;
 }
 
-.section-right{
+.section-right {
     margin-left: 30px;
 }
 
-.btn-back{
-
-    background-color: $secondary-font;
+.btn-back {
+    border: 1px solid $secondary-font;
+    background-color: transparent;
+    font-size: 24px;
     color: #fafafa;
-    margin: 5px;
+    margin: 15px;
+    margin-left: 0;
     padding: 5px;
     cursor: pointer;
+    border-radius: 5px;
+
+    &:hover {
+        background-color: $secondary-font;
+
+    }
 
 }
 
+
+.slick-next:before,
+.slick-prev:before {
+    font-size: 35px;
+
+    &:hover {
+        scale: 1.2;
+
+    }
+}
+
+.slick-next,
+.slick-prev {
+
+
+    &:hover {
+        scale: 1.2;
+
+    }
+}
+
+.slick-prev {
+    left: -40px;
+
+
+}

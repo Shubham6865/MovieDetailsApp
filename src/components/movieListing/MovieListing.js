@@ -5,6 +5,9 @@ import MovieCard from '../movieCard/MovieCard'
 import './movieListing.scss';
 import Slider from 'react-slick';
 import {Settings} from '../../common/Settings'
+import Loader from '../loader/Loader';
+
+
 
 const MovieListing = () => {
 
@@ -13,7 +16,11 @@ const MovieListing = () => {
   const shows= useSelector(getAllShows);
   let renderMovies, renderShows="";
   
-  
+  if (!movies.Response) {
+    // Show loading state if movies are still loading
+     return <Loader/>;
+    
+  }
 
   renderMovies = movies.Response === "True" ? (
     movies.Search.map((movie, index) => (
